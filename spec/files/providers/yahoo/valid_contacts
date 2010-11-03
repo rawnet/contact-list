@@ -1,0 +1,116 @@
+{
+  "contacts": 
+  {    
+    "start": 0,
+    "count": 2,
+    "total": 2, 
+    "uri":  "http:\/\/social.yahooapis.com\/v1\/user\/USER-GUID\/contacts", 
+    "contact": 
+    [ 
+      {        
+        "uri": "http:\/\/social.yahooapis.com\/v1\/user\/USER-GUID\/contact\/378",        
+        "created": "2009-02-02T00:47:11Z", 
+        "updated": "2009-07-15T18:07:16Z",
+        "isConnection": false, 
+        "id": 378,
+        "fields": 
+        [ 
+          {
+            "uri": "http:\/\/social.yahooapis.com\/v1\/user\/USER-GUID\/contact\/378\/guid\/819",
+            "created": "2009-02-02T00:47:11Z",
+            "updated": "2009-07-15T18:07:16Z",
+            "id": 819,
+            "type": "guid",
+            "value": "AN-OTHER-GUID",
+            "editedBy": "OWNER",
+            "flags": [ ], 
+            "isConnection": false 
+          },  
+          {
+            "uri": "http:\/\/social.yahooapis.com\/v1\/user\/USER-GUID\/contact\/378\/email\/413",
+            "created": "2009-02-02T00:47:11Z",
+            "updated": "2009-07-15T18:07:16Z",
+            "id": 413,
+            "type": "email",
+            "value": "dr.sri.jr@example.com",
+            "editedBy": "OWNER",
+            "flags": [ ], 
+            "isConnection": false 
+          },  
+          {
+            "uri": "http:\/\/social.yahooapis.com\/v1\/user\/USER-GUID\/contact\/378\/name\/523",
+            "created": "2009-02-02T00:47:11Z",
+            "updated": "2009-07-15T18:07:16Z",
+            "id": 523,
+            "type": "name",
+            "value": 
+              {
+                "givenName": "Someone",
+                "middleName": "Really",
+                "familyName": "Important",
+                "prefix": "Dr.",
+                "suffix": "Jr."
+              },
+            "editedBy": "OWNER",
+            "flags": [ ], 
+            "isConnection": false 
+          }
+        ], 
+        "categories": [ ]
+      },
+      
+      {        
+        "uri": "http:\/\/social.yahooapis.com\/v1\/user\/USER-GUID\/contact\/379",        
+        "created": "2009-02-02T00:47:11Z", 
+        "updated": "2009-07-15T18:07:16Z",
+        "isConnection": false, 
+        "id": 379,
+        "fields": 
+        [ 
+          {
+            "uri": "http:\/\/social.yahooapis.com\/v1\/user\/USER-GUID\/contact\/379\/guid\/214",
+            "created": "2009-02-02T00:47:11Z",
+            "updated": "2009-07-15T18:07:16Z",
+            "id": 214,
+            "type": "guid",
+            "value": "ANONTHER-OTHER-GUID",
+            "editedBy": "OWNER",
+            "flags": [ ], 
+            "isConnection": false 
+          },  
+          {
+            "uri": "http:\/\/social.yahooapis.com\/v1\/user\/USER-GUID\/contact\/379\/email\/201",
+            "created": "2009-02-02T00:47:11Z",
+            "updated": "2009-07-15T18:07:16Z",
+            "id": 201,
+            "type": "email",
+            "value": "someone@example.com",
+            "editedBy": "OWNER",
+            "flags": [ ], 
+            "isConnection": false 
+          },  
+          {
+            "uri": "http:\/\/social.yahooapis.com\/v1\/user\/USER-GUID\/contact\/379\/name\/937",
+            "created": "2009-02-02T00:47:11Z",
+            "updated": "2009-07-15T18:07:16Z",
+            "id": 937,
+            "type": "name",
+            "value": 
+              {
+                "givenName": "Someone",
+                "middleName": "Notso",
+                "familyName": "Important",
+                "prefix": "Mr.",
+                "suffix": ""
+              },
+            "editedBy": "OWNER",
+            "flags": [ ], 
+            "isConnection": false 
+          }
+        ],
+        "categories": [ ]
+      }
+      
+    ]
+  }
+}
