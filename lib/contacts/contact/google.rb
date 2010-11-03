@@ -1,4 +1,4 @@
-class Contacts::Contact::Google < Contacts::Contact::Email
+class Contacts::Contact::Google < Struct.new(:email, :name)
 
   def self.parse xml
     name = xml.css("title").text

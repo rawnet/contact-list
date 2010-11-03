@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'active_support'
+require 'rails/all'
 require 'active_support/core_ext/hash/slice'
 class Hash
   alias_method :only,  :slice

@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.files = [
     "lib/contacts.rb",
      "lib/contacts/contact.rb",
-     "lib/contacts/contact/email.rb",
+     "lib/contacts/contact/facebook.rb",
      "lib/contacts/contact/google.rb",
      "lib/contacts/contact/yahoo.rb",
      "lib/contacts/provider.rb",
@@ -35,8 +35,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Find contacts from multiple providers}
   s.test_files = [
-    "spec/models/contacts/google_spec.rb",
-     "spec/models/providers/facebook_spec.rb",
+    "spec/models/providers/facebook_spec.rb",
      "spec/models/providers/google_spec.rb",
      "spec/models/providers/yahoo_spec.rb",
      "spec/spec_helper.rb",

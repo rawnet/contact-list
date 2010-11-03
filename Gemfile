@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'rails', '3.0.1'
 gem 'oauth'
+gem 'oauth2'
 gem 'nokogiri'
 gem 'multi_json'
 
