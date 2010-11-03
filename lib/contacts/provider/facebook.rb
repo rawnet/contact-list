@@ -1,3 +1,4 @@
+require 'multi_json'
 class Contacts::Provider::Facebook < Contacts::Provider::OAuth2
   set_site_url 'https://graph.facebook.com'
   
