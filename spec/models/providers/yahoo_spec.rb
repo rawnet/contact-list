@@ -56,7 +56,7 @@ describe Contacts::Provider::Yahoo do
         @response = mock('Response')
         @response_body = File.read(File.expand_path(File.dirname(__FILE__) + '/../../files/providers/yahoo/valid_contacts')).to_s
         @response.stub(:body).and_return(@response_body)
-        instance.connection.stub!(:get).with("/v1/user/#{valid_attributes[:uid]}/contacts").and_return(@response)
+        instance.connection.stub!(:get).with("/v1/user/me/contacts?format=json").and_return(@response)
       end                   
       
       it_should_respond_to :contacts
