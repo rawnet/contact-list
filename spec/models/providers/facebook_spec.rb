@@ -19,13 +19,13 @@ describe Contacts::Provider::Facebook do
    end
 
    def valid_attributes
-     { :code => 'A-BIG-ACCESS-KEY', :client_id => 'CLIENT-ID', :client_secret => 'CLIENT-SECRET' }
+     { :code => 'A-BIG-ACCESS-KEY', :consumer_key => 'CLIENT-ID', :consumer_secret => 'CLIENT-SECRET' }
    end
    
    context "valid_attributes" do
      it_should_include :code
-     it_should_include :client_id
-     it_should_include :client_secret
+     it_should_include :consumer_key
+     it_should_include :consumer_secret
    end
    
    context "when initialized" do
