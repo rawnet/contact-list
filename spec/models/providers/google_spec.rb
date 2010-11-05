@@ -51,6 +51,25 @@ describe Contacts::Provider::Google do
       instance.site_url.should == 'https://www.google.com'
     end
     
+    context "call all with valid auth" do
+      before do
+        @response = mock('Response')
+        @response_body = File.read(File.expand_path(File.dirname(__FILE__) + '/../../files/providers/google/valid_contacts')).to_s
+        @response.stub(:body).and_return(@response_body)
+        @conn = mock('AccessToken')
+        @conn.stub!(:get).with("/m8/feeds/contacts/#{valid_attributes[:uid]}/full").and_return(@response)
+        OAuth::AccessToken.stub!(:new).and_return(@conn)
+      end
+      
+      it "should find all contacts" do
+        contacts = klass.all(valid_attributes)
+        contacts.should be_kind_of(Array)
+        instance.should have(2).contacts 
+        first_contact = @instance.contacts.first
+        first_contact.should be_kind_of(Contacts::Contact::Google)
+      end
+    end
+    
     context "when authorized" do
       before do
         @response = mock('Response')

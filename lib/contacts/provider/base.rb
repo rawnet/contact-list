@@ -25,6 +25,10 @@ module Contacts
         self.name.demodulize.underscore
       end
       
+      def self.all attrs={}
+        new(attrs).contacts
+      end
+      
       def initialize attrs={}
         parse_attributes attrs
       end
