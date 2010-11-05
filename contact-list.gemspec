@@ -16,7 +16,8 @@ Gem::Specification.new do |s|
     "README"
   ]
   s.files = [
-    "lib/contacts.rb",
+    "lib/contact_list.rb",
+     "lib/contacts.rb",
      "lib/contacts/contact.rb",
      "lib/contacts/contact/facebook.rb",
      "lib/contacts/contact/google.rb",
@@ -29,8 +30,7 @@ Gem::Specification.new do |s|
      "lib/contacts/provider/oauth.rb",
      "lib/contacts/provider/oauth2.rb",
      "lib/contacts/provider/twitter.rb",
-     "lib/contacts/provider/yahoo.rb",
-     "lib/contacts_list.rb"
+     "lib/contacts/provider/yahoo.rb"
   ]
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
