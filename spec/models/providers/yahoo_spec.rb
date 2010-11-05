@@ -11,11 +11,11 @@ describe Contacts::Provider::Yahoo do
   end
   
   def valid_attributes
-    {:consumer_key => 'anonymous', :consumer_secret => 'anonymous', :token => 'ACCESS-TOKEN', :secret => 'ACCESS-SECRET', :uid => 'USER-GUID'}
+    {:consumer_key => 'anonymous', :consumer_secret => 'anonymous', :token => 'ACCESS-TOKEN', :secret => 'ACCESS-SECRET'}
   end
 
-  it "should have an import type of 'yahoo'" do
-    klass.import_type.should == 'yahoo'
+  it "should have an provider id of 'yahoo'" do
+    klass.provider_id.should == 'yahoo'
   end
   
   it "should extend the OAuth provider" do

@@ -14,8 +14,8 @@ describe Contacts::Provider::Google do
     {:consumer_key => 'anonymous', :consumer_secret => 'anonymous', :token => 'ACCESS-TOKEN', :secret => 'ACCESS-SECRET', :uid => 'valid@email.com'}
   end
 
-  it "should have an import type of 'google'" do
-    klass.import_type.should == 'google'
+  it "should have an provider_id of 'google'" do
+    klass.provider_id.should == 'google'
   end
   
   it "should extend the OAuth provider" do

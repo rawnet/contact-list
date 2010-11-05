@@ -21,7 +21,7 @@ module Contacts
         attr_accessor *attrs
       end
 
-      def self.import_type
+      def self.provider_id
         self.name.demodulize.underscore
       end
       

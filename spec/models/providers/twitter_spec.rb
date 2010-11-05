@@ -14,8 +14,8 @@ describe Contacts::Provider::Twitter do
     {:consumer_key => 'anonymous', :consumer_secret => 'anonymous', :token => 'ACCESS-TOKEN', :secret => 'ACCESS-SECRET'}
   end
   
-  it "should have an import_type of 'twitter'" do
-    klass.import_type.should == 'twitter'
+  it "should have an provider_id of 'twitter'" do
+    klass.provider_id.should == 'twitter'
   end
   
   it "should extend the OAuth provider" do

@@ -10,8 +10,8 @@ describe Contacts::Provider::Facebook do
      @instance ||= klass.new attrs
    end
 
-   it "should have an import type of 'facebook'" do
-     klass.import_type.should == 'facebook'
+   it "should have an provider_id of 'facebook'" do
+     klass.provider_id.should == 'facebook'
    end
    
    it "should inherit from OAuth2" do
