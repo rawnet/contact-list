@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Alex Neill", "Tom Warner"]
-  s.date = %q{2010-11-03}
+  s.date = %q{2010-11-05}
   s.description = %q{Find contacts from multiple providers}
   s.email = ["alex@rawnet.com", "tom@rawnet.com"]
   s.extra_rdoc_files = [
@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "lib/contacts/contact.rb",
      "lib/contacts/contact/facebook.rb",
      "lib/contacts/contact/google.rb",
+     "lib/contacts/contact/twitter.rb",
      "lib/contacts/contact/yahoo.rb",
      "lib/contacts/provider.rb",
      "lib/contacts/provider/base.rb",
@@ -27,6 +28,7 @@ Gem::Specification.new do |s|
      "lib/contacts/provider/google.rb",
      "lib/contacts/provider/oauth.rb",
      "lib/contacts/provider/oauth2.rb",
+     "lib/contacts/provider/twitter.rb",
      "lib/contacts/provider/yahoo.rb",
      "lib/contacts_list.rb"
   ]
@@ -35,8 +37,11 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Find contacts from multiple providers}
   s.test_files = [
-    "spec/models/providers/facebook_spec.rb",
+    "spec/models/contacts_spec.rb",
+     "spec/models/provider_spec.rb",
+     "spec/models/providers/facebook_spec.rb",
      "spec/models/providers/google_spec.rb",
+     "spec/models/providers/twitter_spec.rb",
      "spec/models/providers/yahoo_spec.rb",
      "spec/spec_helper.rb",
      "spec/support/provider_spec_helper.rb"
