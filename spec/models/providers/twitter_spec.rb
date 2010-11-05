@@ -35,6 +35,7 @@ describe Contacts::Provider::Twitter do
       instance.should have(2).contacts
       first = instance.contacts.first
       first.should be_kind_of(Contacts::Contact::Twitter)
+      first.uid.should == '169277120'
       first.screen_name.should == 'rawnet_dev'
       first.name.should == 'Rawnet Development'
     end

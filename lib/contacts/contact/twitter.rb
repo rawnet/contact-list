@@ -1,7 +1,7 @@
-class Contacts::Contact::Twitter < Struct.new(:screen_name, :name)
+class Contacts::Contact::Twitter < Struct.new(:uid, :screen_name, :name)
   
   def self.parse hash
-    new hash['screen_name'], hash['name']
+    new hash['id'].to_s, hash['screen_name'], hash['name']
   end
   
 end
