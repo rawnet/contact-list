@@ -19,11 +19,11 @@ describe Contacts::Provider::Facebook do
    end
 
    def valid_attributes
-     { :code => 'A-BIG-ACCESS-KEY', :consumer_key => 'CLIENT-ID', :consumer_secret => 'CLIENT-SECRET' }
+     { :token => 'A-BIG-ACCESS-KEY', :consumer_key => 'CLIENT-ID', :consumer_secret => 'CLIENT-SECRET' }
    end
    
    context "valid_attributes" do
-     it_should_include :code
+     it_should_include :token
      it_should_include :consumer_key
      it_should_include :consumer_secret
    end
