@@ -10,8 +10,6 @@ module Contacts
       self.valid_attributes = []          
       delegate :import_type, :valid_attributes, :to => "self.class"
 
-      attr_reader :contacts_response, :contacts
-
       def self.set_site_url url
         self.site_url = url
       end
