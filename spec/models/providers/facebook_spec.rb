@@ -31,10 +31,8 @@ describe Contacts::Provider::Facebook do
    context "when initialized" do
      before do 
        instance valid_attributes
-       @response = mock('Response')
        @response_body = File.read(File.expand_path(File.dirname(__FILE__) + '/../../files/providers/facebook/valid_contacts')).to_s
-       @response.stub(:body).and_return(@response_body)
-       instance.connection.stub!(:get).with("/me/friends").and_return(@response)
+       instance.connection.stub!(:get).with("/me/friends").and_return(@response_body)
      end
      
      it "should have 2 contacts" do

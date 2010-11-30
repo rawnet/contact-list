@@ -7,7 +7,7 @@ class Contacts::Provider::Facebook < Contacts::Provider::OAuth2
   end
   
   def parse_contacts!
-    @contacts = MultiJson.decode(contacts_response.body)['data'].map { |contact| Contacts::Contact::Facebook.parse(contact) }.compact
+    @contacts = MultiJson.decode(contacts_response)['data'].map { |contact| Contacts::Contact::Facebook.parse(contact) }.compact
   end
    
 end 
