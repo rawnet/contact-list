@@ -38,6 +38,7 @@ describe Contacts::Provider::Twitter do
       first.uid.should == '169277120'
       first.screen_name.should == 'rawnet_dev'
       first.name.should == 'Rawnet Development'
+      first.image_url.should == 'http://a2.twimg.com/profile_images/1083530406/141466520_normal.jpg'
     end
     
   end

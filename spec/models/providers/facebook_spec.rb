@@ -40,7 +40,8 @@ describe Contacts::Provider::Facebook do
        first = instance.contacts.first
        first.should be_kind_of(Contacts::Contact::Facebook)
        first.name.should == 'Somebody Special'
-       first.uid.should == '1312412490158' 
+       first.uid.should == '1312412490158'
+       first.image_url.should == 'http://graph.facebook.com/1312412490158/picture'
      end
      
      
