@@ -96,7 +96,7 @@ PLATFORMS
 
 DEPENDENCIES
   multi_json
-  nokogiri
+  nokogiri (>= 1.4.4)
   oauth
   oauth2
   rails (= 3.0.1)
