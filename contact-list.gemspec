@@ -59,7 +59,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rspec-rails>, [">= 2.0.0.rc"])
       s.add_runtime_dependency(%q<rails>, ["~> 3.0.1"])
       s.add_runtime_dependency(%q<multi_json>, ["~> 0.0.4"])
-      s.add_runtime_dependency(%q<nokogiri>, ["~> 1.4.3.1"])
+      s.add_runtime_dependency(%q<nokogiri>, ["~> 1.4.4"])
       s.add_runtime_dependency(%q<oauth>, ["~> 0.4.4"])
     else
       s.add_dependency(%q<rails>, ["= 3.0.1"])
@@ -70,7 +70,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rspec-rails>, [">= 2.0.0.rc"])
       s.add_dependency(%q<rails>, ["~> 3.0.1"])
       s.add_dependency(%q<multi_json>, ["~> 0.0.4"])
-      s.add_dependency(%q<nokogiri>, ["~> 1.4.3.1"])
+      s.add_dependency(%q<nokogiri>, ["~> 1.4.4"])
       s.add_dependency(%q<oauth>, ["~> 0.4.4"])
     end
   else
@@ -82,7 +82,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rspec-rails>, [">= 2.0.0.rc"])
     s.add_dependency(%q<rails>, ["~> 3.0.1"])
     s.add_dependency(%q<multi_json>, ["~> 0.0.4"])
-    s.add_dependency(%q<nokogiri>, ["~> 1.4.3.1"])
+    s.add_dependency(%q<nokogiri>, ["~> 1.4.4"])
     s.add_dependency(%q<oauth>, ["~> 0.4.4"])
   end
 end

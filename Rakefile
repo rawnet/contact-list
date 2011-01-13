@@ -12,7 +12,7 @@ begin
     gem.files = FileList['lib/**/*'].to_a
     gem.add_dependency("rails", "~> 3.0.1")
     gem.add_dependency("multi_json", "~> 0.0.4")
-    gem.add_dependency("nokogiri", "~> 1.4.3.1")
+    gem.add_dependency("nokogiri", "~> 1.4.4")
     gem.add_dependency("oauth", "~> 0.4.4")
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
