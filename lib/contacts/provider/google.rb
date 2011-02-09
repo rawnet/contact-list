@@ -4,7 +4,7 @@ class Contacts::Provider::Google < Contacts::Provider::OAuth
   set_site_url 'https://www.google.com'
   
   def retrieve_contacts!
-    @contacts_response = connection.get("/m8/feeds/contacts/#{uid||'default'}/full")
+    @contacts_response = connection.get("/m8/feeds/contacts/#{uid||'default'}/full?max-results=999")
   end
   
   def parse_contacts!

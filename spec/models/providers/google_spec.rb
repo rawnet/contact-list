@@ -75,7 +75,7 @@ describe Contacts::Provider::Google do
         @response = mock('Response')
         @response_body = File.read(File.expand_path(File.dirname(__FILE__) + '/../../files/providers/google/valid_contacts')).to_s
         @response.stub(:body).and_return(@response_body)
-        instance.connection.stub!(:get).with("/m8/feeds/contacts/#{valid_attributes[:uid]}/full").and_return(@response)
+        instance.connection.stub!(:get).with("/m8/feeds/contacts/#{valid_attributes[:uid]}/full?max-results=999").and_return(@response)
       end                   
       
       it_should_respond_to :contacts
