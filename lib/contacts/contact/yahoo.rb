@@ -1,7 +1,7 @@
 class Contacts::Contact::Yahoo < Struct.new(:email, :name)
 
   def self.parse hash
-    email, name = '', ''
+    email, name = '', nil
     hash['fields'].each do |field|
       case field['type']
       when 'email'
@@ -10,7 +10,8 @@ class Contacts::Contact::Yahoo < Struct.new(:email, :name)
         name = [field['value']['givenName'], field['value']['familyName']].join(' ') rescue ''
       end
     end
-    new(email, name)
+    name ||= email
+    new(email, name) unless email.blank?
   end
   
 end
