@@ -56,8 +56,9 @@ describe Contacts::Provider::Google do
         @response = mock('Response')
         @response_body = File.read(File.expand_path(File.dirname(__FILE__) + '/../../files/providers/google/valid_contacts')).to_s
         @response.stub(:body).and_return(@response_body)
+        @response.stub(:code).and_return("200")
         @conn = mock('AccessToken')
-        @conn.stub!(:get).with("/m8/feeds/contacts/#{valid_attributes[:uid]}/full").and_return(@response)
+        @conn.stub!(:get).with("/m8/feeds/contacts/#{valid_attributes[:uid]}/full?max-results=999").and_return(@response)
         OAuth::AccessToken.stub!(:new).and_return(@conn)
       end
       
@@ -75,6 +76,7 @@ describe Contacts::Provider::Google do
         @response = mock('Response')
         @response_body = File.read(File.expand_path(File.dirname(__FILE__) + '/../../files/providers/google/valid_contacts')).to_s
         @response.stub(:body).and_return(@response_body)
+        @response.stub(:code).and_return("200")
         instance.connection.stub!(:get).with("/m8/feeds/contacts/#{valid_attributes[:uid]}/full?max-results=999").and_return(@response)
       end                   
       
@@ -112,6 +114,32 @@ describe Contacts::Provider::Google do
           instance.should have(2).contacts 
           first_contact = @instance.contacts.first
           first_contact.should be_kind_of(Contacts::Contact::Google)           
+        end
+        
+      end
+      
+    end
+
+    context "when unauthorized" do
+      before do
+        @response = mock('Response')
+        @response_body = File.read(File.expand_path(File.dirname(__FILE__) + '/../../files/providers/google/invalid_contacts')).to_s
+        @response.stub(:body).and_return(@response_body)
+        @response.stub(:code).and_return("401")
+        instance.connection.stub!(:get).with("/m8/feeds/contacts/#{valid_attributes[:uid]}/full?max-results=999").and_return(@response)
+      end                   
+      
+      it "should set contacts_response" do
+        instance.retrieve_contacts! 
+        instance.contacts_response.should be_present
+        instance.contacts_response.should == @response
+      end
+      
+      context "parsing contacts" do
+        before { instance.retrieve_contacts! }
+        
+        it "should return an array of google contacts" do
+          lambda { instance.parse_contacts! }.should raise_error("Error 401".inspect)
         end
         
       end
