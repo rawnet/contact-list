@@ -46,6 +46,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rspec>, ["~> 2.0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.0"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.0"])
       s.add_runtime_dependency(%q<activesupport>, [">= 2.1.0"])
       s.add_runtime_dependency(%q<multi_json>, ["~> 1.0.4"])
       s.add_runtime_dependency(%q<nokogiri>, ["~> 1.5.0"])
@@ -54,6 +55,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rspec>, ["~> 2.0"])
     else
       s.add_dependency(%q<contact-list>, [">= 0"])
+      s.add_dependency(%q<rspec>, ["~> 2.0"])
       s.add_dependency(%q<rspec>, ["~> 2.0"])
       s.add_dependency(%q<rspec>, ["~> 2.0"])
       s.add_dependency(%q<rspec>, ["~> 2.0"])
@@ -66,6 +68,7 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<contact-list>, [">= 0"])
+    s.add_dependency(%q<rspec>, ["~> 2.0"])
     s.add_dependency(%q<rspec>, ["~> 2.0"])
     s.add_dependency(%q<rspec>, ["~> 2.0"])
     s.add_dependency(%q<rspec>, ["~> 2.0"])
