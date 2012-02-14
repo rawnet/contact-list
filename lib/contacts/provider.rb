@@ -7,9 +7,10 @@ module Contacts
     autoload :Twitter,  'contacts/provider/twitter'
     autoload :OAuth2,   'contacts/provider/oauth2'
     autoload :Facebook, 'contacts/provider/facebook'
+    autoload :Linkedin, 'contacts/provider/linkedin'
     
     def self.all
-      [Google, Yahoo, Twitter, Facebook]
+      [Google, Yahoo, Twitter, Facebook, Linkedin]
     end
     
     def self.find provider_id
