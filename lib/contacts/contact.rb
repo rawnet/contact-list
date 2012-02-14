@@ -4,5 +4,6 @@ module Contacts
     autoload :Yahoo,    'contacts/contact/yahoo'
     autoload :Facebook, 'contacts/contact/facebook'
     autoload :Twitter,  'contacts/contact/twitter'
+    autoload :Linkedin, 'contacts/contact/linkedin'
   end
 end

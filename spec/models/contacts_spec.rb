@@ -9,7 +9,7 @@ describe Contacts do
     end
     
     it "should raise error with an invalid provider_id" do
-      lambda { Contacts[:waffle] }.should raise_error('Invalid provider_id "waffle", available provider_id; google, yahoo, twitter, and facebook')
+      lambda { Contacts[:waffle] }.should raise_error(/^Invalid provider_id "waffle", available provider_id/)
     end
     
     it "should find the right Provider when a valid provider_id is passed" do
