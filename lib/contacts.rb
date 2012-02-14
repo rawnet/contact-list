@@ -9,6 +9,6 @@ module Contacts
   private
 
   def self.error_with! provider_id
-    raise("Invalid provider_id #{provider_id.to_s.inspect}, available provider_id; #{Provider.all.map(&:provider_id).to_sentence}")
+    raise("Invalid provider_id #{provider_id.to_s.inspect}, available provider_id; #{Provider.all.map(&:provider_id).join(', ')}")
   end
 end
